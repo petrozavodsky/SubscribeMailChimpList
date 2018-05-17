@@ -7,12 +7,12 @@ Author: Petrozavodsky
 Author URI: http://alkoweb.ru
 Requires PHP: 7.0
 */
-	
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-require_once( plugin_dir_path( __FILE__ )."includes/Autoloader.php" );
+require_once( plugin_dir_path( __FILE__ ) . "includes/Autoloader.php" );
 
 use SubscribeMailChimpList\Autoloader;
 
@@ -20,6 +20,8 @@ new Autoloader( __FILE__, 'SubscribeMailChimpList' );
 
 
 use SubscribeMailChimpList\Base\Wrap;
+use SubscribeMailChimpList\Classes\AjaxHandle;
+use SubscribeMailChimpList\Classes\MailChimpAjax;
 
 class SubscribeMailChimpList extends Wrap {
 	public $version = '1.0.1';
@@ -28,6 +30,9 @@ class SubscribeMailChimpList extends Wrap {
 	function __construct() {
 		self::$textdomine = $this->setTextdomain();
 
+		new AjaxHandle();
+
+		new MailChimpAjax();
 
 		new \SubscribeMailChimpList\Classes\Shortcode(
 			'boilerplate_shortcode',

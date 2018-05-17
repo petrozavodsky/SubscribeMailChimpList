@@ -1,5 +1,5 @@
 {
-  "name": "wordpress-magic-boilerplate",
+  "name": "SubscribeMailChimpList",
   "version": "5.0.0",
   "description": "WordPress plugin gulp tasks",
   "main": "gulpfile.js",
