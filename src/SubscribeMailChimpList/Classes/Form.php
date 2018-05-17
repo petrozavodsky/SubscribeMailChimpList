@@ -13,7 +13,6 @@ class Form {
 
 
 	public function form_html( $attrs ) {
-	    d($attrs);
 		ob_start();
 		?>
         <div class="SubscribeMailChimpList__form-wrapper">
