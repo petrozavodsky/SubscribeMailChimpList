@@ -31,13 +31,28 @@ class SubscribeMailChimpWidget extends WP_Widget {
 
 
 	public function form( $instance ) {
-		echo '<p class="no-options-widget">' . __( 'There are no options for this widget.', 'SubscribeMailChimpList' ) . '</p>';
+		if ( ! isset( $instance['title'] ) ) {
+			$instance['title'] = __( 'Subscribe to our newsletter', 'SubscribeMailChimpList' );
+		}
+		?>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>">
+				<?php _e( 'Title', 'SubscribeMailChimpList' ); ?>
+            </label>
 
-		return 'noform';
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>"
+                   name="<?php echo $this->get_field_name( 'title' ); ?>"
+                   type="text" value="<?php echo esc_attr( $instance['title'] ); ?>"/>
+
+        </p>
+		<?php
 	}
 
 	public function update( $new_instance, $old_instance ) {
-		return $new_instance;
+		$instance['title'] = esc_textarea( $new_instance['title'] );
+
+		return $instance;
 	}
+
 
 }
