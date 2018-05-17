@@ -22,6 +22,7 @@ new Autoloader( __FILE__, 'SubscribeMailChimpList' );
 use SubscribeMailChimpList\Base\Wrap;
 use SubscribeMailChimpList\Classes\AjaxHandle;
 use SubscribeMailChimpList\Classes\MailChimpAjax;
+use SubscribeMailChimpList\Classes\Shortcode;
 
 class SubscribeMailChimpList extends Wrap {
 	public $version = '1.0.1';
@@ -34,11 +35,10 @@ class SubscribeMailChimpList extends Wrap {
 
 		new MailChimpAjax();
 
-		new \SubscribeMailChimpList\Classes\Shortcode(
-			'boilerplate_shortcode',
+		new Shortcode(
+			'SubscribeMailChimpList',
 			[
-				'title'       => 'Boilerplate title',
-				'description' => 'Boilerplate description'
+				'title'       => 'Subscribe',
 			]
 		);
 
