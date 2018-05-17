@@ -3,9 +3,12 @@
 namespace SubscribeMailChimpList\Widgets;
 
 use SubscribeMailChimpList;
+use SubscribeMailChimpList\Utils\WidgetHelper;
 use WP_Widget;
 
 class SubscribeMailChimpWidget extends WP_Widget {
+    use WidgetHelper;
+
 	private $textdomain = __NAMESPACE__;
 	private $suffix = " - SubscribeMailChimpWidget";
 
