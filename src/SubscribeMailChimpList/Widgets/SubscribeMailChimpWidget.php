@@ -7,7 +7,9 @@ use SubscribeMailChimpList\Utils\WidgetHelper;
 use WP_Widget;
 
 class SubscribeMailChimpWidget extends WP_Widget {
-    use WidgetHelper;
+	use WidgetHelper;
+
+	public $css = true;
 
 	private $textdomain = __NAMESPACE__;
 	private $suffix = " - SubscribeMailChimpWidget";
