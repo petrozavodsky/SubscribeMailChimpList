@@ -24,6 +24,7 @@ use SubscribeMailChimpList\Classes\AjaxHandle;
 use SubscribeMailChimpList\Classes\Form;
 use SubscribeMailChimpList\Classes\MailChimpAjax;
 use SubscribeMailChimpList\Classes\Shortcode;
+use SubscribeMailChimpList\Utils\ActivateWidgets;
 
 class SubscribeMailChimpList extends Wrap {
 	public $version = '1.0.1';
@@ -43,6 +44,12 @@ class SubscribeMailChimpList extends Wrap {
 			[
 				'title' => __('Subscribe to our newsletter','SubscribeMailChimpList'),
 			]
+		);
+
+		new ActivateWidgets(
+			__FILE__,
+			'Widgets',
+			'SubscribeMailChimpList'
 		);
 
 	}
