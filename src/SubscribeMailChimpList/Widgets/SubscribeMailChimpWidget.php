@@ -29,7 +29,6 @@ class SubscribeMailChimpWidget extends WP_Widget {
 		echo $args['after_widget'];
 	}
 
-
 	public function form( $instance ) {
 		if ( ! isset( $instance['title'] ) ) {
 			$instance['title'] = __( 'Subscribe to our newsletter', 'SubscribeMailChimpList' );
