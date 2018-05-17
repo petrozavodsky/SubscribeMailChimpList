@@ -15,9 +15,9 @@ class SubscribeMailChimpWidget extends WP_Widget {
 		$className        = str_replace( "\\", '-', $className );
 		parent::__construct(
 			$className,
-			__( "My widget ", 'SubscribeMailChimpList' ) . $this->suffix,
+			__( "Subscribe widget ", 'SubscribeMailChimpList' ) . $this->suffix,
 			[
-				'description' => __( "My widget", 'SubscribeMailChimpList' ) . $this->suffix
+				'description' => __( "Mailchimp subscribe form", 'SubscribeMailChimpList' ) . $this->suffix
 			]
 		);
 	}
