@@ -17,7 +17,7 @@ class SubscribeMailChimpWidget extends WP_Widget {
 			$className,
 			__( "My widget ", 'SubscribeMailChimpList' ) . $this->suffix,
 			[
-				'description' => __( "My widget", 'SubscribeMailChimpList') . $this->suffix
+				'description' => __( "My widget", 'SubscribeMailChimpList' ) . $this->suffix
 			]
 		);
 	}
@@ -25,9 +25,7 @@ class SubscribeMailChimpWidget extends WP_Widget {
 	public function widget( $args, $instance ) {
 
 		echo $args['before_widget'];
-		?>
-ec
-		<?php
+		echo apply_filters( 'SubscribeMailChimpList__shortcode-content', [ 'title' => $instance['title'] ] );
 		echo $args['after_widget'];
 	}
 
