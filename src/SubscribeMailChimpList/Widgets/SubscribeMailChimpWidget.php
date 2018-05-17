@@ -26,7 +26,7 @@ class SubscribeMailChimpWidget extends WP_Widget {
 
 		echo $args['before_widget'];
 		?>
-
+ec
 		<?php
 		echo $args['after_widget'];
 	}

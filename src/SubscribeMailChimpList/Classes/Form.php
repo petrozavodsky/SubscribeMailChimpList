@@ -22,7 +22,7 @@ class Form {
 					<?php echo $attrs['title']; ?>
                 </div>
 
-                <form action="" method="post">
+                <form action="" method="post" class="SubscribeMailChimpList__form">
 
 
                     <div class="SubscribeMailChimpList__form-fields-wrapper">
