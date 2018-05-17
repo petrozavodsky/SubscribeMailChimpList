@@ -21,6 +21,7 @@ new Autoloader( __FILE__, 'SubscribeMailChimpList' );
 
 use SubscribeMailChimpList\Base\Wrap;
 use SubscribeMailChimpList\Classes\AjaxHandle;
+use SubscribeMailChimpList\Classes\Form;
 use SubscribeMailChimpList\Classes\MailChimpAjax;
 use SubscribeMailChimpList\Classes\Shortcode;
 
@@ -35,10 +36,12 @@ class SubscribeMailChimpList extends Wrap {
 
 		new MailChimpAjax();
 
+		new Form();
+
 		new Shortcode(
 			'SubscribeMailChimpList',
 			[
-				'title'       => 'Subscribe',
+				'title' => __('Subscribe to our newsletter','SubscribeMailChimpList'),
 			]
 		);
 
