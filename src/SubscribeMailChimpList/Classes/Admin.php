@@ -22,7 +22,7 @@ class Admin {
 
 				$option_name = self::$option_prefix . 'api_key';
 
-				$val = esc_attr( get_option( $option_name ) );
+				$val = esc_attr( get_option( $option_name, '' ) );
 
 				echo "<input name='{$option_name}' id='{$option_name}' value='{$val}' class='regular-text' type='text' />";
 
@@ -40,7 +40,7 @@ class Admin {
 
 				$option_name = self::$option_prefix . 'list_id';
 
-				$val = esc_attr( get_option( $option_name ) );
+				$val = esc_attr( get_option( $option_name, '' ) );
 
 				echo "<input name='{$option_name}' id='{$option_name}' value='{$val}' class='regular-text' type='text' />";
 
