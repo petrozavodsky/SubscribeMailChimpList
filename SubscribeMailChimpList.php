@@ -20,6 +20,7 @@ new Autoloader( __FILE__, 'SubscribeMailChimpList' );
 
 
 use SubscribeMailChimpList\Base\Wrap;
+use SubscribeMailChimpList\Classes\Admin;
 use SubscribeMailChimpList\Classes\AjaxHandle;
 use SubscribeMailChimpList\Classes\Form;
 use SubscribeMailChimpList\Classes\MailChimpAjax;
@@ -32,6 +33,8 @@ class SubscribeMailChimpList extends Wrap {
 
 	function __construct() {
 		self::$textdomine = $this->setTextdomain();
+
+		new Admin();
 
 		new AjaxHandle();
 
