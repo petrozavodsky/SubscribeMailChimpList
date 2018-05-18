@@ -53,7 +53,6 @@ class Admin {
 
 	}
 
-
 	public function sanitize( $val ) {
 
 		if ( is_string( $val ) ) {
