@@ -15,25 +15,39 @@ class Admin {
 
 	function add_option_field_to_setting_admin_page() {
 
+		d(
+			get_option( self::$option_prefix . 'api_key' )
+		);
+
 		add_settings_field(
-			self::$option_prefix.'api_key',
+			self::$option_prefix . 'api_key',
 			__( 'MailChimp API key', 'SubscribeMailChimpList' ),
-			'trim',
+			[ $this, 'sanitize' ],
 			'reading',
 			'default'
 		);
 
-		register_setting( 'reading', self::$option_prefix.'api_key' );
+		register_setting( 'reading', self::$option_prefix . 'api_key' );
 
 		add_settings_field(
-			self::$option_prefix.'list_id',
+			self::$option_prefix . 'list_id',
 			__( 'MailChimp List id', 'SubscribeMailChimpList' ),
-			'trim',
+			[ $this, 'sanitize' ],
 			'reading',
 			'default'
 		);
 
-		register_setting( 'reading', self::$option_prefix.'list_id' );
+		register_setting( 'reading', self::$option_prefix . 'list_id' );
+
+	}
+
+	private function sanitize( $val ) {
+
+		if ( is_string( $val ) ) {
+			return trim( $val );
+		}
+
+		return '';
 
 	}
 
