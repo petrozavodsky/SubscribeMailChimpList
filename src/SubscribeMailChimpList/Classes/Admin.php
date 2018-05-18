@@ -18,7 +18,17 @@ class Admin {
 		add_settings_field(
 			self::$option_prefix . 'api_key',
 			__( 'MailChimp API key', 'SubscribeMailChimpList' ),
-			[ $this, 'sanitize' ],
+			function ( $val ) {
+
+				$option_name = self::$option_prefix . 'api_key';
+
+				if ( empty( $val ) ) {
+					$val = '';
+				}
+
+				echo "<input name='{$option_name}' id='{$option_name}' value='{$val}' class='regular-text' type='text' />";
+
+			},
 			'reading',
 			'default'
 		);
@@ -28,7 +38,17 @@ class Admin {
 		add_settings_field(
 			self::$option_prefix . 'list_id',
 			__( 'MailChimp List id', 'SubscribeMailChimpList' ),
-			[ $this, 'sanitize' ],
+			function ( $val ) {
+
+				$option_name = self::$option_prefix . 'list_id';
+
+				if ( empty( $val ) ) {
+					$val = '';
+				}
+
+				echo "<input name='{$option_name}' id='{$option_name}' value='{$val}' class='regular-text' type='text' />";
+
+			},
 			'reading',
 			'default'
 		);
@@ -37,14 +57,5 @@ class Admin {
 
 	}
 
-	public function sanitize( $val ) {
-
-		if ( is_string( $val ) ) {
-			return trim( $val );
-		}
-
-		return '';
-
-	}
 
 }
