@@ -33,7 +33,7 @@ class Admin {
 			'default'
 		);
 
-		register_setting( 'reading', self::$option_prefix . 'api_key' );
+		register_setting( 'reading', self::$option_prefix . 'api_key', [ 'sanitize_callback' => [ $this, 'sanitize' ] ] );
 
 		add_settings_field(
 			self::$option_prefix . 'list_id',
@@ -53,9 +53,18 @@ class Admin {
 			'default'
 		);
 
-		register_setting( 'reading', self::$option_prefix . 'list_id' );
+		register_setting( 'reading', self::$option_prefix . 'list_id', [ 'sanitize_callback' => [ $this, 'sanitize' ] ] );
 
 	}
 
+
+	public function sanitize( $val ) {
+
+		if ( is_string( $val ) ) {
+			return trim( $val );
+		}
+
+		return '';
+	}
 
 }
