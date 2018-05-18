@@ -12,8 +12,8 @@ class MailChimpAjax {
 
 
 	function __construct() {
-		$this->api_key = '38576c5ed90b7a3e0391778403a2a1f1-us17';
-		$this->list_id = 'f523b435f6';
+		$this->api_key = '38576c391778403a2a1f1-us17';
+		$this->list_id = 'f5235f6';
 
 		add_action( 'SubscribeMailChimpList__ajax-handle', [ $this, 'action' ] );
 	}
