@@ -9,11 +9,11 @@ class Admin {
 
 	public function __construct() {
 
-		add_action( 'admin_menu', [ $this, 'add_option_field_to_general_admin_page' ] );
+		add_action( 'admin_menu', [ $this, 'add_option_field_to_setting_admin_page' ] );
 
 	}
 
-	function add_option_field_to_general_admin_page() {
+	function add_option_field_to_setting_admin_page() {
 
 		add_settings_field(
 			self::$option_prefix.'api_key',
