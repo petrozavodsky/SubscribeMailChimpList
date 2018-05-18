@@ -37,7 +37,7 @@ class Admin {
 
 	}
 
-	private function sanitize( $val ) {
+	public function sanitize( $val ) {
 
 		if ( is_string( $val ) ) {
 			return trim( $val );
