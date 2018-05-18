@@ -15,10 +15,6 @@ class Admin {
 
 	function add_option_field_to_setting_admin_page() {
 
-		d(
-			get_option( self::$option_prefix . 'api_key' )
-		);
-
 		add_settings_field(
 			self::$option_prefix . 'api_key',
 			__( 'MailChimp API key', 'SubscribeMailChimpList' ),
