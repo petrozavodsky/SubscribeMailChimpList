@@ -13,7 +13,7 @@ class Admin {
 
 	}
 
-	function add_option_field_to_setting_admin_page() {
+	public function add_option_field_to_setting_admin_page() {
 
 		add_settings_field(
 			self::$option_prefix . 'api_key',
