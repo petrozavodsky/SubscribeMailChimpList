@@ -10,7 +10,9 @@ class Form {
 
 		add_filter( 'SubscribeMailChimpList__shortcode-content', [ $this, 'form_html' ], 10, 1 );
 
-		add_action( 'SubscribeMailChimpList__form', [ $this, 'form_html' ], 10, 1 );
+		add_action( 'SubscribeMailChimpList__form', function ( $attrs ) {
+			echo $this->form_html( $attrs );
+		}, 10, 1 );
 
 	}
 
@@ -21,12 +23,13 @@ class Form {
         <div class="SubscribeMailChimpList__form-wrapper">
             <div class="SubscribeMailChimpList__form-wrap">
 
-                <div class="SubscribeMailChimpList__form-title">
-					<?php echo $attrs['title']; ?>
-                </div>
+				<?php if ( empty( $attrs['title'] ) ): ?>
+                    <div class="SubscribeMailChimpList__form-title">
+						<?php echo $attrs['title']; ?>
+                    </div>
+				<?php endif; ?>
 
                 <form action="" method="post" class="SubscribeMailChimpList__form">
-
 
                     <div class="SubscribeMailChimpList__form-fields-wrapper">
 
@@ -39,9 +42,11 @@ class Form {
 
                     </div>
 
-
-                    <div class="SubscribeMailChimpList__form-alerts-wrap">
-
+                    <div class="SubscribeMailChimpList__form-alerts-wrap
+                    <?php echo( empty( $attrs['alert-class'] ) ? 'no-message' : $attrs['alert-class'] ); ?>">
+						<?php if ( empty( $attrs['alert'] ) ): ?>
+							<?php echo $attrs['alert']; ?>
+						<?php endif; ?>
                     </div>
 
                 </form>
