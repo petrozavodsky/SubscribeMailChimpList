@@ -8,39 +8,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.7\n"
+"Last-Translator: \n"
+"Language: ru_RU\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: SubscribeMailChimpList.php:48, src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:42
+#: SubscribeMailChimpList.php:48,
+#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:42
 msgid "Subscribe to our newsletter"
-msgstr ""
+msgstr "Подписаться на рассылку"
 
 #: src/SubscribeMailChimpList/Classes/Admin.php:20
 msgid "MailChimp API key"
-msgstr ""
+msgstr "API ключ MailChimp"
 
 #: src/SubscribeMailChimpList/Classes/Admin.php:38
 msgid "MailChimp List id"
-msgstr ""
+msgstr "ID списка в MailChimp"
 
 #: src/SubscribeMailChimpList/Classes/Form.php:36
 msgid "Enter your E-mail..."
-msgstr ""
+msgstr "Введите E-mail…"
 
 #: src/SubscribeMailChimpList/Classes/Form.php:40
 msgid "Subscribe"
-msgstr ""
+msgstr "Подписаться"
 
 #: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:23
 msgid "Subscribe widget "
-msgstr ""
+msgstr "Виджет подписки "
 
 #: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:25
 msgid "Mailchimp subscribe form"
-msgstr ""
+msgstr "Форма подписки MailChimp"
 
 #: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:47
 msgid "Title"
-msgstr ""
+msgstr "Заголовок"
