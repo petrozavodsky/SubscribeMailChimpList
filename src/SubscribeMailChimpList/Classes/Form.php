@@ -11,7 +11,6 @@ class Form {
 		add_filter( 'SubscribeMailChimpList__shortcode-content', [ $this, 'form_html' ], 10, 1 );
 
 		add_action( 'SubscribeMailChimpList__form', function ( $attrs ) {
-		    d($attrs);
 			echo $this->form_html( $attrs );
 		}, 10, 1 );
 
