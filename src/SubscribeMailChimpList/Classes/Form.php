@@ -23,13 +23,13 @@ class Form {
         <div class="SubscribeMailChimpList__form-wrapper">
             <div class="SubscribeMailChimpList__form-wrap">
 
-				<?php if ( !empty( $attrs['title'] ) ): ?>
+				<?php if ( ! empty( $attrs['title'] ) ): ?>
                     <div class="SubscribeMailChimpList__form-title">
 						<?php echo $attrs['title']; ?>
                     </div>
 				<?php endif; ?>
 
-                <form action="" method="post" class="SubscribeMailChimpList__form">
+                <form action="<?php echo AjaxHandle::$action_name; ?>" method="post" class="SubscribeMailChimpList__form">
 
                     <div class="SubscribeMailChimpList__form-fields-wrapper">
 
@@ -44,7 +44,7 @@ class Form {
 
                     <div class="SubscribeMailChimpList__form-alerts-wrap
                     <?php echo( empty( $attrs['alert-class'] ) ? 'no-message' : $attrs['alert-class'] ); ?>">
-						<?php if ( !empty( $attrs['alert'] ) ): ?>
+						<?php if ( ! empty( $attrs['alert'] ) ): ?>
 							<?php echo $attrs['alert']; ?>
 						<?php endif; ?>
                     </div>
