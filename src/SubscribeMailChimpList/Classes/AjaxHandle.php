@@ -28,22 +28,24 @@ class AjaxHandle extends Ajax {
 	 * @param $name
 	 */
 	private function add_js_css( $name ) {
+		if ( ! is_admin() ) {
 
-		$handle = $this->addJs(
-			$name,
-			'header',
-			[ 'jquery' ]
-		);
+			$handle = $this->addJs(
+				$name,
+				'wp_head',
+				[ 'jquery' ]
+			);
 
-		$this->vars_ajax(
-			$handle,
-			[
-				'action_name'     => self::$action_name,
-				'ajax_url'        => $this->ajax_url,
-				'ajax_url_action' => $this->ajax_url_action,
-			]
-		);
+			$this->vars_ajax(
+				$handle,
+				[
+					'action_name'     => self::$action_name,
+					'ajax_url'        => $this->ajax_url,
+					'ajax_url_action' => $this->ajax_url_action,
+				]
+			);
 
+		}
 	}
 
 	/**

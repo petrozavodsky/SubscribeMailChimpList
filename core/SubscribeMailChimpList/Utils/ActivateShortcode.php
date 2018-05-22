@@ -30,7 +30,7 @@ abstract class ActivateShortcode {
 		} );
 
 		if ( method_exists( $this, 'init' ) ) {
-			$this->init($tag, $attrs );
+			$this->init( $tag, $attrs );
 		}
 
 	}
@@ -45,7 +45,7 @@ abstract class ActivateShortcode {
 				$this->addJs( $tag );
 			}
 			if ( $this->css ) {
-				$this->addCss( $tag );
+				d( $this->addCss( $tag ) );
 			}
 		}
 	}
@@ -90,5 +90,15 @@ abstract class ActivateShortcode {
 	 */
 	abstract function base( $attrs, $content, $tag );
 
+	/**
+	 * @param $string
+	 *
+	 * @return string
+	 */
+	protected function trim_carriage_return( $string ) {
+		$string =  str_replace( [ "\r", "\n" ], '', $string );
+
+		return strval($string);
+	}
 
 }

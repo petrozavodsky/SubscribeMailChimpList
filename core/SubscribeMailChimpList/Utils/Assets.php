@@ -148,7 +148,7 @@ trait Assets {
 
 		$handle = $this->registerJs( $handle, $position, $dep, $version, $src );
 		add_action( $position, function () use ( $in_footer, $handle, $src, $dep, $version ) {
-			wp_enqueue_script( $handle, $src, $dep, $version, $in_footer );
+//			wp_enqueue_script( $handle, $src, $dep, $version, $in_footer );
 		} );
 
 		return $handle;

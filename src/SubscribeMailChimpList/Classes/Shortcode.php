@@ -14,7 +14,17 @@ class Shortcode extends ActivateShortcode {
 
 	function base( $attrs, $content, $tag ) {
 
-		return apply_filters( 'SubscribeMailChimpList__shortcode-content', $attrs );
+		$filter_code = apply_filters( 'SubscribeMailChimpList__shortcode-content', $attrs );
+
+		$code = "<div class='SubscribeMailChimpList__form-shortcode'>{$filter_code}</div>";
+
+		return str_replace(
+			[ "\r", "\n" ],
+			'',
+			$code
+
+		);
+
 	}
 
 }
