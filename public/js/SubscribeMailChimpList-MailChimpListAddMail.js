@@ -32,6 +32,8 @@ var SubscribeMailChimpListMailChimpListAddMail =
                 var data = $(this).serialize();
                 var button = $(this).find("[type='submit']");
                 var alert_area = $(this).find(this_class.alert_selector);
+                var input = $(this).find("[name='email']");
+
 
                 button.removeAttr('disabled');
 
@@ -50,6 +52,14 @@ var SubscribeMailChimpListMailChimpListAddMail =
 
                         button.removeAttr('disabled');
                         alert_area.text(result.data.message);
+
+
+                        if (result.success) {
+
+                            alert_area.removeClass('no-message').addClass('success');
+                            input.val('');
+                        }
+
                     }
 
                 });
