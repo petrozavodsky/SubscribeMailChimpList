@@ -18,6 +18,10 @@ The plugin allows you to add an Email collection form using the MailChimp API us
 
 Upload the plugin to your site Activate it, then enter your MailChimp API-key and List id.
 
+== Upgrade Notice ==
+
+Updated in a standard way
+
 == Screenshots ==
 
 1. Plugin base settings
