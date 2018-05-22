@@ -1,10 +1,11 @@
 === Subscribe MailChimp List ===
-Contributors: Petrozavodsky, vovasik
+Contributors: vovasik
 Tags: subscribe, MailChimp, email list, subscribe news leather, subscribe AJAX, subscribe form , subscribe widget, subscribe shortcode
 Requires at least: 4.0
 Tested up to: 4.9.6
 Stable tag: 4.9.6
 License: GPLv3 or later
+Requires PHP: 5.6
 
 Plugin  added subscribe form
 
