@@ -32,7 +32,7 @@ class Form {
 
                     <div class="SubscribeMailChimpList__form-fields-wrapper">
 
-                        <input type="email" placeholder="<?php _e( 'Enter your E-mail...', 'SubscribeMailChimpList' ); ?>"
+                        <input name="email" type="email" placeholder="<?php _e( 'Enter your E-mail...', 'SubscribeMailChimpList' ); ?>"
                                class="SubscribeMailChimpList__form-input">
 
                         <button type="submit" class="SubscribeMailChimpList__form-button">
@@ -42,7 +42,10 @@ class Form {
                     </div>
 
                     <div class="SubscribeMailChimpList__form-alerts-wrap
-                    <?php echo( empty( $attrs['alert-class'] ) ? 'no-message' : $attrs['alert-class'] ); ?>">
+                    <?php echo( empty( $attrs['alert-class'] ) ? 'no-message' : $attrs['alert-class'] ); ?>"
+                    data-alert="alert-area"
+                    >
+
 						<?php if ( ! empty( $attrs['alert'] ) ): ?>
 							<?php echo $attrs['alert']; ?>
 						<?php endif; ?>
