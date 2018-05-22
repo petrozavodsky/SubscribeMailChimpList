@@ -5,7 +5,7 @@ Plugin Name: Subscribe MailChimp List
 Plugin URI: http://alkoweb.ru
 Author: Petrozavodsky
 Author URI: http://alkoweb.ru
-Requires PHP: 7.0
+Requires PHP: 5.6
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
