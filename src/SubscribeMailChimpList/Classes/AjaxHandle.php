@@ -9,31 +9,36 @@ use SubscribeMailChimpList\Utils\Assets;
 class AjaxHandle extends Ajax {
 	use Assets;
 
+	public static $action_name = "MailChimpListAddMail";
+
 	/**
 	 * AjaxOut2 constructor.
 	 */
 	function __construct() {
-		$name = "MailChimpListAddMail";
-		parent::__construct( $name );
-		$this->add_js_css( $name );
+		parent::__construct( self::$action_name );
+		$this->add_js_css( self::$action_name );
 	}
 
 	/**
 	 * @param $name
 	 */
 	private function add_js_css( $name ) {
+
 		$handle = $this->addJs(
 			$name,
 			'header',
 			[ 'jquery' ]
 		);
+
 		$this->vars_ajax(
 			$handle,
 			[
+				'action_name'     => self::$action_name,
 				'ajax_url'        => $this->ajax_url,
 				'ajax_url_action' => $this->ajax_url_action,
 			]
 		);
+
 	}
 
 	/**
