@@ -2,9 +2,12 @@
 
 /*
 Plugin Name: Subscribe MailChimp List
-Plugin URI: http://alkoweb.ru
-Author: Petrozavodsky
-Author URI: http://alkoweb.ru
+Description: The plugin allows you to add an Email collection form using the MailChimp API using AJAX. Using this plugin there are several ways-widget, shortcode, hook
+Author: Petrozavodsky, vovasik
+Author URI: https://alkoweb.ru
+Plugin URI: https://alkoweb.ru/subscribe-mail-chimp-list/
+License: GPLv3
+Text Domain: SubscribeMailChimpList
 Requires PHP: 5.6
 */
 
