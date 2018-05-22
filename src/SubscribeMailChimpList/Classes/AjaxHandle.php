@@ -11,11 +11,16 @@ class AjaxHandle extends Ajax {
 
 	public static $action_name = "MailChimpListAddMail";
 
+	public static $form_action;
+
 	/**
 	 * AjaxOut2 constructor.
 	 */
 	function __construct() {
 		parent::__construct( self::$action_name );
+
+		self::$form_action = $this->ajax_url_action;
+
 		$this->add_js_css( self::$action_name );
 	}
 

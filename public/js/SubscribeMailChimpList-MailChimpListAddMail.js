@@ -11,7 +11,7 @@ var SubscribeMailChimpListMailChimpListAddMail =
 
             this_class.action_url = window.SubscribeMailChimpList_MailChimpListAddMail__vars.ajax_url_action;
 
-            this_class.init("[action$='" + this_class.action_url + "']");
+            this_class.init("[action='" + this_class.action_url + "']");
 
 
         },

@@ -6,7 +6,7 @@ namespace SubscribeMailChimpList\Classes;
 
 class Form {
 
-	public function __construct() {
+	public function __construct( ) {
 
 		add_filter( 'SubscribeMailChimpList__shortcode-content', [ $this, 'form_html' ], 10, 1 );
 
@@ -15,7 +15,6 @@ class Form {
 		}, 10, 1 );
 
 	}
-
 
 	public function form_html( $attrs ) {
 		ob_start();
@@ -29,7 +28,7 @@ class Form {
                     </div>
 				<?php endif; ?>
 
-                <form action="<?php echo AjaxHandle::$action_name; ?>" method="post" class="SubscribeMailChimpList__form">
+                <form action="<?php echo AjaxHandle::$form_action; ?>" method="post" class="SubscribeMailChimpList__form">
 
                     <div class="SubscribeMailChimpList__form-fields-wrapper">
 
