@@ -28,7 +28,7 @@ use SubscribeMailChimpList\Classes\Shortcode;
 use SubscribeMailChimpList\Utils\ActivateWidgets;
 
 class SubscribeMailChimpList extends Wrap {
-	public $version = '1.0.1';
+	public $version = '1.0.2';
 	public static $textdomine;
 
 	function __construct() {
