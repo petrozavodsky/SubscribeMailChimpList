@@ -4,12 +4,9 @@ var SubscribeMailChimpListMailChimpListAddMail =
         selector: '.grid__girl-posts-items',
         run: function () {
             var this_class = this;
-
-            if (document.querySelector(this_class.selector)) {
-                this_class.slider_init(this_class.selector);
-            }
+            this_class.init("")
         },
-        slider_init: function (selector) {
+        init: function (selector) {
 
         },
 
