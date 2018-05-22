@@ -1,6 +1,7 @@
 === Subscribe MailChimp List ===
 Contributors: vovasik
 Tags: subscribe, MailChimp, email list, subscribe news leather, subscribe AJAX, subscribe form , subscribe widget, subscribe shortcode
+Donate link: https://alkoweb.ru
 Requires at least: 4.0
 Tested up to: 4.9.6
 Stable tag: 4.9.6
