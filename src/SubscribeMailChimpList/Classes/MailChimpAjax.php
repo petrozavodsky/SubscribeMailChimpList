@@ -12,8 +12,8 @@ class MailChimpAjax {
 
 
 	function __construct() {
-		$this->api_key = Admin::$option_prefix . 'api_key';
-		$this->list_id = Admin::$option_prefix . 'list_id';
+		$this->api_key = get_option( Admin::$option_prefix . 'api_key' );
+		$this->list_id = get_option( Admin::$option_prefix . 'list_id' );
 
 		add_action( 'SubscribeMailChimpList__ajax-handle', [ $this, 'action' ] );
 	}
@@ -67,10 +67,10 @@ class MailChimpAjax {
 		$url         = "https://{$shard}.api.mailchimp.com/3.0/lists/{$list_id}/members/";
 		$response    = wp_remote_post( $url, $opts );
 
-
 		if ( is_wp_error( $response ) ) {
 			return false;
 		}
+
 		if ( $response['response']['code'] == 200 ) {
 			return true;
 		}
