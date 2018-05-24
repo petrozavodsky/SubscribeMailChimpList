@@ -83,7 +83,9 @@ class SubscribeMailChimpWidget extends WP_Widget
 
             <input class="widefat" id="<?php echo $this->get_field_id('api_key'); ?>"
                    name="<?php echo $this->get_field_name('api_key'); ?>"
-                   type="text" value="" placeholder="<?php echo esc_attr($instance['api_key']); ?>"/>
+                   type="text"
+                   placeholder="<?php echo esc_attr( $this->default_options['api_key']);?>"
+                   value="<?php echo esc_attr($instance['api_key']); ?>"/>
 
         </p>
 
@@ -94,7 +96,9 @@ class SubscribeMailChimpWidget extends WP_Widget
 
             <input class="widefat" id="<?php echo $this->get_field_id('list_id'); ?>"
                    name="<?php echo $this->get_field_name('list_id'); ?>"
-                   type="text" value="" placeholder="<?php echo esc_attr($instance['list_id']); ?>"/>
+                   type="text"
+                   placeholder="<?php echo esc_attr( $this->default_options['list_id']);?>"
+                   value="<?php echo esc_attr($instance['list_id']); ?>"/>
 
         </p>
         <?php
