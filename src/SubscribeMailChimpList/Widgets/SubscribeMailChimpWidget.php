@@ -14,6 +14,7 @@ class SubscribeMailChimpWidget extends WP_Widget
     public $css = true;
 
     private $textdomain = __NAMESPACE__;
+
     private $suffix = " - SubscribeMailChimpWidget";
 
     private $default_options = [];
@@ -23,7 +24,9 @@ class SubscribeMailChimpWidget extends WP_Widget
         $this->default_options = $this->default_options();
 
         $this->textdomain = SubscribeMailChimpList::$textdomine;
+
         $className = get_called_class();
+
         $className = str_replace("\\", '-', $className);
 
         parent::__construct(
