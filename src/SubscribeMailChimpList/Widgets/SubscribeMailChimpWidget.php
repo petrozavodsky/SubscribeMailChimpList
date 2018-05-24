@@ -16,11 +16,16 @@ class SubscribeMailChimpWidget extends WP_Widget
     private $textdomain = __NAMESPACE__;
     private $suffix = " - SubscribeMailChimpWidget";
 
+    private $default_options = [];
+
     function __construct()
     {
+        $this->default_options = $this->default_options();
+
         $this->textdomain = SubscribeMailChimpList::$textdomine;
         $className = get_called_class();
         $className = str_replace("\\", '-', $className);
+
         parent::__construct(
             $className,
             __("Subscribe widget ", 'SubscribeMailChimpList') . $this->suffix,
@@ -43,6 +48,9 @@ class SubscribeMailChimpWidget extends WP_Widget
 
     public function form($instance)
     {
+        d(
+            $this->default_options()
+        );
         if (!isset($instance['title'])) {
             $instance['title'] = __('Subscribe to our newsletter', 'SubscribeMailChimpList');
         }
@@ -57,6 +65,28 @@ class SubscribeMailChimpWidget extends WP_Widget
                    type="text" value="<?php echo esc_attr($instance['title']); ?>"/>
 
         </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('api_key'); ?>">
+                <?php _e('Custom API Key', 'SubscribeMailChimpList'); ?>
+            </label>
+
+            <input class="widefat" id="<?php echo $this->get_field_id('api_key'); ?>"
+                   name="<?php echo $this->get_field_name('api_key'); ?>"
+                   type="text" value="" placeholder="<?php echo esc_attr($instance['api_key']); ?>"/>
+
+        </p>
+
+        <p>
+            <label for="<?php echo $this->get_field_id('list_id'); ?>">
+                <?php _e('Custom List id', 'SubscribeMailChimpList'); ?>
+            </label>
+
+            <input class="widefat" id="<?php echo $this->get_field_id('list_id'); ?>"
+                   name="<?php echo $this->get_field_name('list_id'); ?>"
+                   type="text" value="" placeholder="<?php echo esc_attr($instance['list_id']); ?>"/>
+
+        </p>
         <?php
     }
 
@@ -68,7 +98,7 @@ class SubscribeMailChimpWidget extends WP_Widget
     }
 
 
-    public function default_vars()
+    public function default_options()
     {
         $options = [
             'api_key' => get_option(Admin::$option_prefix . 'api_key', false),
