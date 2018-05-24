@@ -57,6 +57,8 @@ class SubscribeMailChimpWidget extends WP_Widget
         if (!isset($instance['title'])) {
             $instance['title'] = __('Subscribe to our newsletter', 'SubscribeMailChimpList');
         }
+
+
         ?>
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>">
@@ -96,6 +98,8 @@ class SubscribeMailChimpWidget extends WP_Widget
     public function update($new_instance, $old_instance)
     {
         $instance['title'] = esc_textarea($new_instance['title']);
+        $instance['api_key'] = esc_textarea($new_instance['api_key']);
+        $instance['list_id'] = esc_textarea($new_instance['list_id']);
 
         return $instance;
     }
