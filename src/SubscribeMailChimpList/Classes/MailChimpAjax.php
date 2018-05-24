@@ -13,7 +13,6 @@ class MailChimpAjax {
 
 	private $respond_message = false;
 
-
 	function __construct() {
 
 		$this->api_key = get_option( Admin::$option_prefix . 'api_key' );
@@ -24,6 +23,7 @@ class MailChimpAjax {
 	}
 
 	public function action() {
+
 		$request = $_REQUEST;
 		$request = array_map( 'trim', $request );
 		unset( $request['action'] );
@@ -46,27 +46,29 @@ class MailChimpAjax {
 
 	private function subscribe( $email ) {
 
-
 		$api_key = $this->api_key;
 		$list_id = $this->list_id;
-		$data    = array(
+
+		$data    = [
 			'email_address' => $email,
 			'status'        => 'subscribed',
-			'merge_fields'  => array(
+			'merge_fields'  => [
 				'EMAIL' => $email,
-			)
-		);
+			]
+		];
+
 		$body    = json_encode( $data );
 
-		$opts        = array(
-			'headers'  => array(
+		$opts        = [
+			'headers'  => [
 				'Content-Type'  => 'application/json',
 				'Authorization' => 'apikey ' . $api_key
-			),
+
+			],
 			'blocking' => true,
 			'timeout'  => $this->timeout,
 			'body'     => $body
-		);
+		];
 		$apiKeyParts = explode( '-', $api_key );
 		$shard       = $apiKeyParts[1];
 		$url         = "https://{$shard}.api.mailchimp.com/3.0/lists/{$list_id}/members/";
@@ -85,4 +87,5 @@ class MailChimpAjax {
 
 		return false;
 	}
+
 }
