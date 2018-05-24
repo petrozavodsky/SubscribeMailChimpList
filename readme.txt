@@ -12,7 +12,7 @@ Plugin  added subscribe form
 
 == Description ==
 
-The plugin allows you to add an Email collection form using the MailChimp API using AJAX. Using this plugin there are several ways-widget, shortcode, hook
+The plugin add an Email collection form using the MailChimp API using AJAX. Using this plugin there are several ways-widget, shortcode, hook
 
 == Installation ==
 
