@@ -33,9 +33,9 @@ class MailChimpAjax {
 
 			if ( $this->subscribe( $request['email'] ) ) {
 				wp_send_json_success( [
-					'message'     => __( 'You have subscribed', 'SubscribeMailChimpList' ), //Вы подписались на рассылку
+					'message'     => __( 'You have subscribed', 'SubscribeMailChimpList' ),
 					'additional'  => $this->respond_message,
-					'button_text' => __( 'Success', 'SubscribeMailChimpList' ), //Готово!
+					'button_text' => __( 'Success', 'SubscribeMailChimpList' ),
 				] );
 			} else {
 
@@ -49,7 +49,7 @@ class MailChimpAjax {
 				}
 
 				wp_send_json_error( [
-					'message'    => __( 'Send failed', 'SubscribeMailChimpList' ), //Ошибка отправки
+					'message'    => __( 'Send failed', 'SubscribeMailChimpList' ),
 					'additional' => $this->respond_message
 				] );
 
@@ -57,7 +57,7 @@ class MailChimpAjax {
 		}
 
 		wp_send_json_error( [
-			'message' => __( 'Invalid Email', 'SubscribeMailChimpList' ), // Неверный Email
+			'message' => __( 'Invalid Email', 'SubscribeMailChimpList' ),
 		] );
 	}
 
