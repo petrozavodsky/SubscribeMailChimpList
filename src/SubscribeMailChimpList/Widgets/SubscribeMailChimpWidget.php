@@ -57,11 +57,11 @@ class SubscribeMailChimpWidget extends WP_Widget
         }
 
         if (!isset($instance['api_key'])) {
-            $instance['api_key'] = $this->default_options['api_key'];
+            $instance['api_key'] = '';
         }
 
         if (!isset($instance['list_id'])) {
-            $instance['list_id'] = $this->default_options['list_id'];
+            $instance['list_id'] = '';
         }
 
         ?>
