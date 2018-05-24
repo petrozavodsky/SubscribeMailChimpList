@@ -56,6 +56,13 @@ class SubscribeMailChimpWidget extends WP_Widget
             $instance['title'] = __('Subscribe to our newsletter', 'SubscribeMailChimpList');
         }
 
+        if (!isset($instance['api_key'])) {
+            $instance['api_key'] = $this->default_options['api_key'];
+        }
+
+        if (!isset($instance['list_id'])) {
+            $instance['list_id'] = $this->default_options['list_id'];
+        }
 
         ?>
         <p>
