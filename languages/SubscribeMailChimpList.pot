@@ -33,6 +33,26 @@ msgstr ""
 msgid "Subscribe"
 msgstr ""
 
+#: src/SubscribeMailChimpList/Classes/MailChimpAjax.php:36
+msgid "You have subscribed"
+msgstr ""
+
+#: src/SubscribeMailChimpList/Classes/MailChimpAjax.php:38
+msgid "Success"
+msgstr ""
+
+#: src/SubscribeMailChimpList/Classes/MailChimpAjax.php:45
+msgid "Member Exists"
+msgstr ""
+
+#: src/SubscribeMailChimpList/Classes/MailChimpAjax.php:52
+msgid "Send failed"
+msgstr ""
+
+#: src/SubscribeMailChimpList/Classes/MailChimpAjax.php:60
+msgid "Invalid Email"
+msgstr ""
+
 #: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:23
 msgid "Subscribe widget "
 msgstr ""

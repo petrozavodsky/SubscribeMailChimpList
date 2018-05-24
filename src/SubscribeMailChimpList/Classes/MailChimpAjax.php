@@ -33,15 +33,32 @@ class MailChimpAjax {
 
 			if ( $this->subscribe( $request['email'] ) ) {
 				wp_send_json_success( [
-					'message'     => 'Вы подписались на рассылку',
-					'button_text' => 'Готово!'
+					'message'     => __( 'You have subscribed', 'SubscribeMailChimpList' ), //Вы подписались на рассылку
+					'additional'  => $this->respond_message,
+					'button_text' => __( 'Success', 'SubscribeMailChimpList' ), //Готово!
 				] );
 			} else {
-				wp_send_json_error( [ 'message' => 'Ошибка отправки' ] );
+
+				if ( 400 == $this->respond_message ) {
+
+					wp_send_json( [
+						'message'    => __( 'Member Exists', 'SubscribeMailChimpList' ),
+						'additional' => $this->respond_message,
+					] );
+
+				}
+
+				wp_send_json_error( [
+					'message'    => __( 'Send failed', 'SubscribeMailChimpList' ), //Ошибка отправки
+					'additional' => $this->respond_message
+				] );
+
 			}
 		}
 
-		wp_send_json_error( [ 'message' => 'Неверный Email' ] );
+		wp_send_json_error( [
+			'message' => __( 'Invalid Email', 'SubscribeMailChimpList' ), // Неверный Email
+		] );
 	}
 
 	private function subscribe( $email ) {
@@ -49,7 +66,7 @@ class MailChimpAjax {
 		$api_key = $this->api_key;
 		$list_id = $this->list_id;
 
-		$data    = [
+		$data = [
 			'email_address' => $email,
 			'status'        => 'subscribed',
 			'merge_fields'  => [
@@ -57,7 +74,7 @@ class MailChimpAjax {
 			]
 		];
 
-		$body    = json_encode( $data );
+		$body = json_encode( $data );
 
 		$opts        = [
 			'headers'  => [
@@ -80,6 +97,7 @@ class MailChimpAjax {
 		}
 
 		$this->respond_message = json_decode( wp_remote_retrieve_body( $response ), true );
+
 
 		if ( $response['response']['code'] == 200 ) {
 			return true;
