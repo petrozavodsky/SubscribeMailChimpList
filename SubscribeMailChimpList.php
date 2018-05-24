@@ -1,4 +1,4 @@
-Text Domain:<?php
+<?php
 /*
 Plugin Name: Subscribe MailChimp List
 Description: The plugin allows you to add an Email collection form using the MailChimp API using AJAX. Using this plugin there are several ways-widget, shortcode, hook
