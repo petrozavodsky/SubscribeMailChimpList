@@ -9,7 +9,7 @@ License: GPLv3
 Text Domain: SubscribeMailChimpList
 Domain Path: /languages
 Requires PHP: 5.6
-Version: 1.1.1
+Version: 1.1.2
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -32,7 +32,7 @@ use SubscribeMailChimpList\Classes\Shortcode;
 use SubscribeMailChimpList\Utils\ActivateWidgets;
 
 class SubscribeMailChimpList extends Wrap {
-	public $version = '1.1.1';
+	public $version = '1.1.2';
 	public static $textdomine;
 
 	function __construct() {

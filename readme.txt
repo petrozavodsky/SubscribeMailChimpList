@@ -35,3 +35,7 @@ Updated in a standard way
 = 1.1.1 =
 
 * Add metadata
+
+= 1.1.2 =
+
+* Add textdomine path
