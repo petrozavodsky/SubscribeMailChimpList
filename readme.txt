@@ -39,3 +39,7 @@ Updated in a standard way
 = 1.1.2 =
 
 * Add textdomine path
+
+= 1.1.3 =
+
+* Js events
