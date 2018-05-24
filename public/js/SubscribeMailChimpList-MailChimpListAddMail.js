@@ -53,11 +53,26 @@ var SubscribeMailChimpListMailChimpListAddMail =
                         button.removeAttr('disabled');
                         alert_area.text(result.data.message);
 
+                        $(селектор).trigger('SubscribeMailChimpListMail__submit', {
+                            url: window.location
+                        });
 
                         if (result.success) {
 
                             alert_area.removeClass('no-message').addClass('success');
+
                             input.val('');
+
+                            $(селектор).trigger('SubscribeMailChimpListMail__success', {
+                                url: window.location
+                            });
+
+                        } else {
+
+                            $(селектор).trigger('SubscribeMailChimpListMail__error', {
+                                url: window.location
+                            });
+
                         }
 
                     }
