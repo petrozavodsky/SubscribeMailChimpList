@@ -18,7 +18,6 @@ class SubscribeMailChimpWidget extends WP_Widget {
 
 	function __construct() {
 
-
 		$this->textdomain = SubscribeMailChimpList::$textdomine;
 
 		$className = get_called_class();
