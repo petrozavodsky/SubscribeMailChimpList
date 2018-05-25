@@ -22,6 +22,9 @@ class Form {
 
 	public function form_html( $attrs ) {
 
+	    // TODO add router
+	    //$attrs
+
 		ob_start();
 		?>
         <div class="SubscribeMailChimpList__form-wrapper">
