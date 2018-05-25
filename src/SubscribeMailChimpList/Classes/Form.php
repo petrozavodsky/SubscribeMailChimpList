@@ -68,4 +68,49 @@ class Form {
 		return $res;
 	}
 
+	private function options_helper( $id, $number ) {
+
+		$default_options = $this->default_options();
+
+		$option      = get_option( $id );
+		$number      = strval( $number );
+		$data        = $option[ $number ];
+		$widget_data = $this->array_clean_empty_vals( [
+			'api_key' => $data['api_key'],
+			'list_id' => $data['list_id']
+		] );
+
+		$out = [];
+
+		foreach ( $default_options as $key => $val ) {
+
+			if ( array_key_exists( $key, $widget_data ) ) {
+				$out[ $key ] = $widget_data[ $key ];
+			} else {
+				$out[ $key ] = $val;
+			}
+
+		}
+
+		return $out;
+
+	}
+
+	private function array_clean_empty_vals( $array ) {
+
+		return array_filter( $array, function ( $element ) {
+			return ! empty( $element );
+		} );
+
+	}
+
+	private function default_options() {
+		$options = [
+			'api_key' => get_option( Admin::$option_prefix . 'api_key', false ),
+			'list_id' => get_option( Admin::$option_prefix . 'list_id', false )
+		];
+
+		return $options;
+	}
+
 }
