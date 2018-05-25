@@ -49,6 +49,7 @@ class Form {
 						<?php if ( ! empty( $attrs['alert'] ) ): ?>
 							<?php echo $attrs['alert']; ?>
 						<?php endif; ?>
+
                     </div>
 
                 </form>
