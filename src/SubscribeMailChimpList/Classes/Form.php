@@ -17,10 +17,11 @@ class Form {
 	public function bind_form( $attrs ) {
 
 		echo $this->form_html( $attrs );
+
 	}
 
-
 	public function form_html( $attrs ) {
+
 		ob_start();
 		?>
         <div class="SubscribeMailChimpList__form-wrapper">
