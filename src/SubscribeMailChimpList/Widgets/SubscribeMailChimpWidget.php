@@ -39,7 +39,13 @@ class SubscribeMailChimpWidget extends WP_Widget {
 		echo $args['before_widget'];
 
 		echo "<div class='SubscribeMailChimpList__form-wrapper-widget'>";
-		echo apply_filters( 'SubscribeMailChimpList__shortcode-content', [ 'title' => $instance['title'] ] );
+		echo apply_filters(
+			'SubscribeMailChimpList__form-content',
+			[
+				'title'   => $instance['title'],
+				'options' => $this->options_helper()
+			]
+		);
 		echo "</div>";
 
 		echo $args['after_widget'];

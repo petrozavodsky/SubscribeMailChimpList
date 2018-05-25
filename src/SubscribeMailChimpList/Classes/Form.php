@@ -8,7 +8,7 @@ class Form {
 
 	public function __construct( ) {
 
-		add_filter( 'SubscribeMailChimpList__shortcode-content', [ $this, 'form_html' ], 10, 1 );
+		add_filter( 'SubscribeMailChimpList__form-content', [ $this, 'form_html' ], 10, 1 );
 
 		add_action( 'SubscribeMailChimpList__form', function ( $attrs ) {
 			echo $this->form_html( $attrs );
