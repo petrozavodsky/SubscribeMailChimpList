@@ -14,7 +14,7 @@ class Shortcode extends ActivateShortcode {
 
 	function base( $attrs, $content, $tag ) {
 
-		$filter_code = apply_filters( 'SubscribeMailChimpList__shortcode-content', $attrs );
+		$filter_code = apply_filters( 'SubscribeMailChimpList__form-content', $attrs );
 
 		$code = "<div class='SubscribeMailChimpList__form-shortcode'>{$filter_code}</div>";
 

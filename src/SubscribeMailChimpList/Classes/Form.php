@@ -6,15 +6,19 @@ namespace SubscribeMailChimpList\Classes;
 
 class Form {
 
-	public function __construct( ) {
+	public function __construct() {
 
 		add_filter( 'SubscribeMailChimpList__form-content', [ $this, 'form_html' ], 10, 1 );
 
-		add_action( 'SubscribeMailChimpList__form', function ( $attrs ) {
-			echo $this->form_html( $attrs );
-		}, 10, 1 );
+		add_action( 'SubscribeMailChimpList__form', [ $this, 'bind_form' ], 10, 1 );
 
 	}
+
+	public function bind_form( $attrs ) {
+
+		echo $this->form_html( $attrs );
+	}
+
 
 	public function form_html( $attrs ) {
 		ob_start();
@@ -43,7 +47,7 @@ class Form {
 
                     <div class="SubscribeMailChimpList__form-alerts-wrap
                     <?php echo( empty( $attrs['alert-class'] ) ? 'no-message' : $attrs['alert-class'] ); ?>"
-                    data-alert="alert-area"
+                         data-alert="alert-area"
                     >
 
 						<?php if ( ! empty( $attrs['alert'] ) ): ?>
