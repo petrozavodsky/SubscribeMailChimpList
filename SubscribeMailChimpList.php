@@ -49,7 +49,7 @@ class SubscribeMailChimpList extends Wrap {
 		new Shortcode(
 			'SubscribeMailChimpList',
 			[
-				'title' => __( 'Subscribe to our newsletter', 'SubscribeMailChimpList' ),
+				'title' => __( 'Subscribe to our newsletter', 'SubscribeMailChimpList' )
 			]
 		);
 

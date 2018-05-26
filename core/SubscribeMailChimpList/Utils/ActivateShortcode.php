@@ -45,7 +45,7 @@ abstract class ActivateShortcode {
 				$this->addJs( $tag );
 			}
 			if ( $this->css ) {
-				d( $this->addCss( $tag ) );
+				 $this->addCss( $tag ) ;
 			}
 		}
 	}

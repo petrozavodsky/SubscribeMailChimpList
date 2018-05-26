@@ -5,26 +5,30 @@ namespace SubscribeMailChimpList\Classes;
 use SubscribeMailChimpList\Utils\ActivateShortcode;
 use SubscribeMailChimpList\Utils\Assets;
 
-class Shortcode extends ActivateShortcode {
-	use Assets;
+class Shortcode extends ActivateShortcode
+{
+    use Assets;
 
-	protected $js = false;
-	protected $css = true;
+    protected $js = false;
+    protected $css = true;
 
 
-	function base( $attrs, $content, $tag ) {
+    function base($attrs, $content, $tag)
+    {
+        d(
+            $attrs, $content, $tag
+        );
+        $filter_code = apply_filters('SubscribeMailChimpList__form-content', $attrs);
 
-		$filter_code = apply_filters( 'SubscribeMailChimpList__form-content', $attrs );
+        $code = "<div class='SubscribeMailChimpList__form-shortcode'>{$filter_code}</div>";
 
-		$code = "<div class='SubscribeMailChimpList__form-shortcode'>{$filter_code}</div>";
+        return str_replace(
+            ["\r", "\n"],
+            '',
+            $code
 
-		return str_replace(
-			[ "\r", "\n" ],
-			'',
-			$code
+        );
 
-		);
-
-	}
+    }
 
 }
