@@ -1,6 +1,7 @@
+var $ = jQuery.noConflict();
+
 var SubscribeMailChimpListMailChimpListAddMail =
     {
-
         alert_selector: false,
 
         action_url: false,

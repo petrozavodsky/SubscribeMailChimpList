@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: SubscribeMailChimpList.php:52, src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:42
+#: SubscribeMailChimpList.php:52, src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:59
 msgid "Subscribe to our newsletter"
 msgstr ""
 
@@ -25,11 +25,11 @@ msgstr ""
 msgid "MailChimp List id"
 msgstr ""
 
-#: src/SubscribeMailChimpList/Classes/Form.php:35
+#: src/SubscribeMailChimpList/Classes/Form.php:43
 msgid "Enter your E-mail..."
 msgstr ""
 
-#: src/SubscribeMailChimpList/Classes/Form.php:39
+#: src/SubscribeMailChimpList/Classes/Form.php:47
 msgid "Subscribe"
 msgstr ""
 
@@ -53,14 +53,22 @@ msgstr ""
 msgid "Invalid Email"
 msgstr ""
 
-#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:23
+#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:29
 msgid "Subscribe widget "
 msgstr ""
 
-#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:25
+#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:31
 msgid "Mailchimp subscribe form"
 msgstr ""
 
-#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:47
+#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:73
 msgid "Title"
+msgstr ""
+
+#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:84
+msgid "Custom API Key"
+msgstr ""
+
+#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:97
+msgid "Custom List id"
 msgstr ""
