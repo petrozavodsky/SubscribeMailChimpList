@@ -6,8 +6,6 @@ var SubscribeMailChimpListMailChimpListAddMail =
 
         action_url: false,
 
-        selector: '.grid__girl-posts-items',
-
         run: function () {
 
             var this_class = this;
