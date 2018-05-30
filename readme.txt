@@ -43,3 +43,7 @@ Updated in a standard way
 = 1.1.3 =
 
 * Js events
+
+= 1.1.4 =
+
+* Switch to stabile branch
