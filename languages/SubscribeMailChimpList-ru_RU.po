@@ -22,8 +22,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: SubscribeMailChimpList.php:52,
-#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:42
+#: SubscribeMailChimpList.php:52, src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:55
 msgid "Subscribe to our newsletter"
 msgstr "Подписаться на рассылку"
 
@@ -35,11 +34,11 @@ msgstr "API ключ MailChimp"
 msgid "MailChimp List id"
 msgstr "ID списка в MailChimp"
 
-#: src/SubscribeMailChimpList/Classes/Form.php:35
+#: src/SubscribeMailChimpList/Classes/Form.php:43
 msgid "Enter your E-mail..."
 msgstr "Введите E-mail…"
 
-#: src/SubscribeMailChimpList/Classes/Form.php:39
+#: src/SubscribeMailChimpList/Classes/Form.php:47
 msgid "Subscribe"
 msgstr "Подписаться"
 
@@ -63,14 +62,14 @@ msgstr "Ошибка отправки"
 msgid "Invalid Email"
 msgstr "Неверный Email"
 
-#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:23
+#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:29
 msgid "Subscribe widget "
 msgstr "Виджет подписки "
 
-#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:25
+#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:31
 msgid "Mailchimp subscribe form"
 msgstr "Форма подписки MailChimp"
 
-#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:47
+#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:62
 msgid "Title"
 msgstr "Заголовок"

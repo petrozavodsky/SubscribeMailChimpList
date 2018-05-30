@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: SubscribeMailChimpList.php:52, src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:59
+#: SubscribeMailChimpList.php:52, src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:55
 msgid "Subscribe to our newsletter"
 msgstr ""
 
@@ -61,14 +61,6 @@ msgstr ""
 msgid "Mailchimp subscribe form"
 msgstr ""
 
-#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:73
+#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:62
 msgid "Title"
-msgstr ""
-
-#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:84
-msgid "Custom API Key"
-msgstr ""
-
-#: src/SubscribeMailChimpList/Widgets/SubscribeMailChimpWidget.php:97
-msgid "Custom List id"
 msgstr ""
